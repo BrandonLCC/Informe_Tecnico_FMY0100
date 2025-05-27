@@ -14,8 +14,10 @@
 
 ### 
 
-# Etapa 2 
+# Entrega 2
 
-# Etapa 3 
+# Entrega 3 
 
-# Como contribuir 
+# Entrega final
+
+# Como contribuir al proyecto
