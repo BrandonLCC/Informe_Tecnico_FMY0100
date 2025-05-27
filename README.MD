@@ -1,10 +1,13 @@
 # Caso - Counter Strike
 
 Empresa: Valve
+
 Versión del proyecto: Counter Strike: GO
 
-Integrantes: Brandon Casas, Felipe Godoy, Leo.
+Integrantes: Brandon Casas, Felipe Godoy, Leo
+
 Docente: Giocrisrai Godoy Bonillo
+
 Nombre del dataset: 
 
 # Entrega 1 
