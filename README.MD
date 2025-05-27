@@ -14,6 +14,9 @@ Nombre del dataset:
 
 ### Objetivo del proyecto
 
+- valve nos pide hacer un analisis etc etc
+
+como relizamos la solciion: 
 - Estableceremos los objetivos del proyecto en forma de preguntas. Una pregunta de regresión y una pregunta de clasificación.
 
 - Identificaremos la relación entre la variable objetivo (target) y identificar alguna relación en las variables prederictorias (features) en las que creemos tiene una relación entre .
