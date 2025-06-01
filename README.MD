@@ -10,7 +10,7 @@ Docente: Giocrisrai Godoy Bonillo
 
 Nombre del dataset: 
 
-# Entrega 1 
+# Etapa 1 
 
 ### Objetivo del proyecto
 
@@ -23,7 +23,7 @@ como relizamos la solciion:
 
 ### 
 
-# Entrega 2 - Modelos de regresión 
+# Etapa 2 - Modelos de regresión 
 
 En esta entrega realizaremos 5 tipos de modelos
 - 
@@ -38,7 +38,7 @@ En esta entrega realizaremos 5 tipos de modelos
 
 ## Métricas 
 
-Estas son las metricas que se utlizaran para los modelos de regresión. Estas metricas nos permitira cuantificar la calidad de las predicciones de los modelos.
+Estas son las metricas que se utlizaran para los modelos de regresión. Estas métricas nos permitira cuantificar la calidad de las predicciones de los modelos.
 
 - Mean Squared Error (MSE): error cuadrático medio 
 - Mean Absolute Error (MAE): error absoluto medio 
