@@ -23,7 +23,20 @@ como relizamos la solciion:
 
 ### 
 
-# Entrega 2
+# Entrega 2 - Modelos de regresión 
+
+En esta entrega realizaremos 5 tipos de modelos
+- 
+
+## Métricas 
+
+1. mean_squared_error (MSE): error cuadrático medio 
+2. mean_absolute_error (MAE): error absoluto medio 
+3. root_mean_squared_Error (RMSE): Raíz del error cuadrático medio
+4. r2_score : coeficiente de determinación o R al cuadrado
+
+
+
 
 # Entrega 3 
 
