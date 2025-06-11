@@ -29,6 +29,8 @@ En esta entrega realizaremos 5 tipos de modelos
 
 ## Métricas 
 
+### Metricas de regresión
+
 Estas son las metricas que se utlizaran para los modelos de regresión. Estas métricas nos permitira cuantificar la calidad de las predicciones de los modelos.
 
 - Mean Squared Error (MSE): error cuadrático medio 
@@ -36,6 +38,10 @@ Estas son las metricas que se utlizaran para los modelos de regresión. Estas m�
 - Root Mean Squared Error (RMSE): raíz del error cuadrático medio
 - R2 Score: coeficiente de determinación o R al cuadrado
 
+## Metricas de clasificación
+
+- Logistic Regression
+- Gradient Boosting
 
 
 
