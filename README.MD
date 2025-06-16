@@ -40,9 +40,7 @@ Estas son las metricas que se utlizaran para los modelos de regresión. Estas m�
 
 ## Metricas de clasificación
 
-- Logistic Regression
-- Gradient Boosting
-
+- 
 
 
 # Entrega 3 
