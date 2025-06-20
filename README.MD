@@ -50,10 +50,25 @@ Recall en una sola métrica)
 - Curva ROC (receiver operating characteristic) 
 - Curva PR
 
+- ¿Que se tomara en cuenta?
+
 1. Lo que se busca es maximizar la exactitud y minimizar la tasa de error
 
 2. Para mostrar todas las predicciones efectuadas por nuestro modelo,
 usaremos una Matriz de Confusión
+
+3. 
+
+4. 
+
+5. Curva PR: 
+- El Average Precision nos sirve para evaluar y comparar el rendimiento de modelos. 
+- Lo ideal sería una curva que se acerque lo máximo posible a la esquina superior derecha. 
+- Buscamos que este valor sea cercano a 1
+
+6. Curva ROC: 
+- Esperamos a que se acerque más a la parte izquierda, relaciona el recoil  con los falsos positivos. 
+- Buscamos que esté valor sea lo mas cercano a 1
 
 
 # Entrega final
