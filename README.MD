@@ -34,8 +34,11 @@ Estas son las metricas que se utlizaran para los modelos de regresión. Estas m�
 Resultados del Modelo de Regresión Lineal Simple
 
 Mean Squared Error (MSE): 648585.7053669427
+
 Mean Absolute Error (MAE): 511.28882520725983
+
 Root Mean Squared Error (RMSE): 805.3481889015103
+
 R2 Score: 0.8541586266087651
 
 observacion:
@@ -45,8 +48,11 @@ El modelo muestra un desempeño robusto, explicando aproximadamente el 85.4% de 
 resultado del GridseahCV
 
 Mean Squared Error (MSE): 648581.7053669427
+
 Mean Absolute Error (MAE): 511.28882520725983
+
 Root Mean Squared Error (RMSE): 805.3481889015103
+
 R2 Score: 0.8541586266087651
 
 Observacion:
