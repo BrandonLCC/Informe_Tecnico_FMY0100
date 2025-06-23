@@ -29,6 +29,30 @@ Estas son las metricas que se utlizaran para los modelos de regresión. Estas m�
 - Root Mean Squared Error (RMSE): raíz del error cuadrático medio
 - R2 Score: coeficiente de determinación o R al cuadrado
 
+### Mejor modelo de regresión
+  
+Resultados del Modelo de Regresión Lineal Simple
+
+Mean Squared Error (MSE): 648585.7053669427
+Mean Absolute Error (MAE): 511.28882520725983
+Root Mean Squared Error (RMSE): 805.3481889015103
+R2 Score: 0.8541586266087651
+
+observacion:
+
+El modelo muestra un desempeño robusto, explicando aproximadamente el 85.4% de la variación de la variable dependiente. El MAE indica un error promedio de 511 unidades entre las predicciones y los valores reales, mientras que el RMSE de 805 refleja la presencia de errores algo más pronunciados, aunque dentro de un rango aceptable. En general, se considera un modelo con buen ajuste para las variables seleccionadas.
+
+resultado del GridseahCV
+
+Mean Squared Error (MSE): 648581.7053669427
+Mean Absolute Error (MAE): 511.28882520725983
+Root Mean Squared Error (RMSE): 805.3481889015103
+R2 Score: 0.8541586266087651
+
+Observacion:
+
+con GridSearchCV para optimizar los hiperparámetros del modelo, los resultados obtenidos se mantienen iguales solo hubo un cambio pequeño en MSE.
+
 ## Etapa 3 - Modelos de clasificación
 
 ### Modelos 
