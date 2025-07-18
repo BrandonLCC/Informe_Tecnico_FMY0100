@@ -1,0 +1,14 @@
+
+
+fastapi
+uvicorn
+scikit-learn
+joblib
+numpy
+jinja2
+python-multipart
+requests
+pandas
+
+#imbalanced-learn
+imbalanced-learn

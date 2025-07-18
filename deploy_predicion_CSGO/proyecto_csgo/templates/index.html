@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Simulador CSGO</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>🎮 Simulador de Predicciones CSGO</h1>
+    
+    <!-- Formulario de Regresión -->
+    <form id="form-regresion">
+        <h2>💰 Predicción del Equipamiento</h2>
+        <p class="info-tooltip">Predice el valor del equipamiento disponible al inicio de la ronda</p>
+        
+        <label>Valor del Equipamiento del Equipo:</label>
+        <input type="number" id="team_equipment" required min="0" max="80000" step="1">
+    
+        <p class="range-info">
+            Guía de valores:<br>
+            - Ronda ECO: $0 - $5000<br>
+            - Semi-eco: $5000 - $12500<br>
+            - Force Buy: $12500 - $20000<br>
+            - Full Buy: $20000 - $40000<br>
+        </p>
+        <button type="submit">Calcular Predicción</button>
+        <div class="resultado" id="resultado-regresion" style="font-family: 'Courier New', monospace;">$</div>
+    </form>
+    <br>
+
+    <!-- Formulario de Clasificación -->
+    <form id="form-clasificacion">
+        <h2>🏆 Predicción de Victoria</h2>
+        <p class="info-tooltip">Predice si el equipo ganará el partido basado en las condiciones actuales</p>
+
+        <label>Mapa:</label>
+        <select id="map" required>
+            <option value="0">de_inferno</option>
+            <option value="1">de_nuke</option>
+            <option value="2">de_mirage</option>
+            <option value="3">de_dust2</option>
+        </select>
+
+        <label>Equipamiento del equipo (RoundStartingEquipmentValue):</label>
+        <input type="number" id="round_starting_equipment" required min="0" max="40000" step="1">
+
+        <label>Bajas acumuladas (MatchKills):</label>
+        <input type="number" id="match_kills" required min="0" max="30" step="1">
+
+        <label>Asistencias acumuladas (MatchAssists):</label>
+        <input type="number" id="match_assists" required min="0" max="10" step="1">
+
+        <label>Headshots acumulados (MatchHeadshots):</label>
+        <input type="number" id="match_headshots" required min="0" max="30" step="1">
+
+        <label>Granadas no letales lanzadas (RNonLethalGrenadesThrown):</label>
+        <input type="number" id="grenades_thrown" required min="0" max="10" step="1">
+
+        <label>Equipo (Team) [1 o 2]:</label>
+        <select id="team" required>
+            <option value="0">Equipo 1</option>
+            <option value="1">Equipo 2</option>
+        </select>
+
+        <button type="submit">Predecir Resultado</button>
+        <div class="resultado" id="resultado-clasificacion"></div>
+    </form>
+
+    <br>
+
+    <!-- Botón de Reinicio -->
+    <form id="form-reiniciar">
+        <h2>🔄 Reiniciar Simulador</h2>
+        <button type="button" onclick="location.reload()">Limpiar Predicciones</button>
+    </form>
+
+    <script>
+      // Función para mostrar recomendaciones basadas en el equipamiento
+    function getEquipmentRecommendation(value) {
+            if (value < 5000) {
+                return "💡 Recomendación: Ronda ECO – Usa pistolas básicas o ahorra dinero.";
+            } else if (value < 12500) {
+                return "💡 Recomendación: Semi-eco – Compra limitada (Desert Eagle, pistolas, alguna utilidad).";
+            } else if (value < 20000) {
+                return "💡 Recomendación: Force Buy – Compra forzada con SMGs o rifles económicos (Galil/FAMAS).";
+            } else {
+                return "💡 Recomendación: Full Buy – Compra completa con rifles principales (AK-47/M4A4), chaleco y utilidad.";
+            }
+        }
+
+        const mapNames = {
+            0: "de_inferno",
+            1: "de_nuke",
+            2: "de_mirage",
+            3: "de_dust2",
+        };
+
+     // Manejar formulario de regresión
+document.getElementById("form-regresion").addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const value = parseFloat(document.getElementById("team_equipment").value);
+    const response = await fetch("/predict/regresion", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ TeamStartingEquipmentValue: value })
+    });
+    const data = await response.json();
+
+    const valorTotal = Math.round(data.RoundStartingEquipmentValue_predicho);
+    const valorPorJugador = Math.round(data.Valor_estimado_por_jugador);
+
+    const tipoRonda = data.Tipo_de_ronda;
+    const recomendacion = data.Recomendacion;
+
+    const resultadoDiv = document.getElementById("resultado-regresion");
+    resultadoDiv.innerHTML = `
+        <div class="prediction-box">
+            <p>💰 Valor estimado del equipamiento comprado: $${valorTotal}</p>
+            <p>👤 Valor estimado por jugador: $${valorPorJugador}</p>
+            <p>🎯 Tipo de ronda estimada: <strong>${tipoRonda}</strong></p>
+            <p>💡 Recomendación: ${recomendacion}</p>
+        </div>
+    `;
+});
+        // Manejar formulario de clasificación
+        document.getElementById("form-clasificacion").addEventListener("submit", async function(e) {
+            e.preventDefault();
+
+            const map = parseInt(document.getElementById("map").value);
+            const roundEquip = parseFloat(document.getElementById("round_starting_equipment").value);
+            const kills = parseInt(document.getElementById("match_kills").value);
+            const assists = parseInt(document.getElementById("match_assists").value);
+            const headshots = parseInt(document.getElementById("match_headshots").value);
+            const grenades = parseInt(document.getElementById("grenades_thrown").value);
+            const team = parseInt(document.getElementById("team").value);
+
+            const response = await fetch("/predict/clasificacion", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    Map: map,
+                    RoundStartingEquipmentValue: roundEquip,
+                    MatchKills: kills,
+                    MatchAssists: assists,
+                    MatchHeadshots: headshots,
+                    RNonLethalGrenadesThrown: grenades,
+                    Team: team
+                })
+            });
+
+            const data = await response.json();
+            const esVictoria = data.RoundWinner_predicho === 1;
+
+            const resultadoDiv = document.getElementById("resultado-clasificacion");
+            resultadoDiv.innerHTML = `
+                <div class="prediction-box ${esVictoria ? 'win' : 'loss'}">
+                    <p>🗺️ Mapa: ${mapNames[map]}</p>
+                    <p>💰 Equipamiento del equipo: $${roundEquip}</p>
+                    <p>🔫 Bajas: ${kills} | 🤝 Asistencias: ${assists} | 🎯 Headshots: ${headshots}</p>
+                    <p>💣 Granadas no letales lanzadas: ${grenades}</p>
+                    <p>👥 Equipo: ${team}</p>
+                    <p class="prediction-result">
+                        ${esVictoria ? 
+                            '✅ Predicción: Victoria probable' : 
+                            '⚠️ Predicción: Derrota probable'}
+                    </p>
+                    <p class="strategy-tip">
+                        ${esVictoria ? 
+                            '💡 Tip: Mantén el control del mapa y el dinero' : 
+                            '💡 Tip: Intenta guardar armas o forzar una jugada arriesgada'}
+                    </p>
+                </div>
+            `;
+        });
+    </script>
+
+</body>
+</html>

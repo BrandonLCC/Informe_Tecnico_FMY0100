@@ -1,0 +1,64 @@
+ body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f4; }
+        h1 { color: #b8bb1c; }
+        form { background: rgb(97, 95, 95); padding: 20px; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(221, 220, 220, 0.1); }
+        input, select, button { margin: 5px 0; padding: 8px; width: 100%; box-sizing: border-box; }
+        button { background-color: #2980b9; color: rgb(65, 65, 65); border: none; cursor: pointer; }
+        button:hover { background-color: #3498db; }
+        .resultado { margin-top: 10px; font-weight: bold; color: #27ae60; }
+
+        label { display: block; margin-top: 10px; }
+        input[type="number"] { width: calc(100% - 16px); }
+        input[type="number"]:focus { border: 2px solid #2980b9; }
+        form h2 { margin-top: 0; color: #d6c64f; }
+        form button { width: auto; padding: 10px 20px; }
+        form button:disabled { background-color: #175f90; cursor: not-allowed; }
+
+        body, h1, form { text-align: center; }
+        form { max-width: 400px; margin: auto; }
+
+        .info-tooltip {
+            font-size: 14px;
+            color: #bb8f20;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .range-info {
+            font-size: 12px;
+            color: #ffffff;
+            margin-top: 2px;
+        }
+
+        body {
+            background-image: url('https://preview.redd.it/v065cssvidh01.jpg?auto=webp&s=4feb78943c46e1b487330230b3d61524af14d804');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .prediction-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .prediction-box.win {
+            border-left: 4px solid #4CAF50;
+        }
+
+        .prediction-box.loss {
+            border-left: 4px solid #f44336;
+        }
+
+        .prediction-result {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .strategy-tip {
+            background: #e3f2fd;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
