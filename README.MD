@@ -106,4 +106,34 @@ En el uso del GridsearchCV para encontrar los mejores hiperparametros, Se obtuvo
 
 
 
-# Como contribuir al proyecto
+# Como instalar el proyecto
+
+Desde tu terminal de visual estudio sigue estos siguientes pasos para instalar y probar el proyecto
+
+1. Crea tu entorno virtual
+
+``` python -m venv venv ```
+
+2. Activa el entorno virtual
+
+``` venv\Scripts\activate ```
+
+2. Realizar un pip install
+
+``` pip install -r requirements.txt ```
+
+3. Ingresar a la carpeta del  poryecto 
+
+``` cd proyecto_csgo ```
+
+4. Entrenar modelo
+
+``` entrenar_modelo.py ```
+
+5. Ejecuta el simulador de prediciones
+
+``` uvicorn main:app --reload ```
+
+6. Selecciona la tecla ctr+click
+
+``` http://127.0.0.1:8000 ```
