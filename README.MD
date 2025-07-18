@@ -11,7 +11,7 @@ Docente: Giocrisrai Godoy Bonillo
 
 ## Etapa 1  
 
-En esta primera etapa, nos centramos en las dos fases de inicales de la metodologia CRISP-DM: Business Understanding y la Fase 2: Data Understanding. La cuales son fundamentales para orientar nuestra investigación.
+En esta primera etapa, nos centramos en las dos fases inicales de la metodologia CRISP-DM: Business Understanding y la Fase 2: Data Understanding. La cuales son fundamentales para orientar nuestra investigación.
 
 En la fase Business Understanding, buscamos comprender el problema desde el punto de vista empresarial, definiendo claramente el objetivo del proyecto para luego realizar las tareas de analisis de datos.
 
@@ -46,27 +46,27 @@ Estas son las metricas que se utlizaran para los modelos de regresión. Estas m�
   
 Resultados del Modelo de Regresión Lineal Simple
 
-Mean Squared Error (MSE): 648585.7053669427
+Mean Squared Error (MSE): 645929.0597126659
 
-Mean Absolute Error (MAE): 511.28882520725983
+Mean Absolute Error (MAE): 509.20139631339185
 
-Root Mean Squared Error (RMSE): 805.3481889015103
+Root Mean Squared Error (RMSE): 803.6971193880602
 
-R2 Score: 0.8541586266087651
+R2 Score:  0.8556029403163038
 
 observacion:
 
-El modelo muestra un desempeño robusto, explicando aproximadamente el 85.4% de la variación de la variable dependiente. El MAE indica un error promedio de 511 unidades entre las predicciones y los valores reales, mientras que el RMSE de 805 refleja la presencia de errores algo más pronunciados, aunque dentro de un rango aceptable. En general, se considera un modelo con buen ajuste para las variables seleccionadas.
+El modelo muestra un desempeño robusto, explicando aproximadamente el 85.5% de la variación de la variable dependiente. El MAE indica un error promedio de 509 unidades entre las predicciones y los valores reales, mientras que el RMSE de 803 refleja la presencia de errores algo más pronunciados, aunque dentro de un rango aceptable. En general, se considera un modelo con buen ajuste para las variables seleccionadas.
 
 resultado del GridseahCV
 
-Mean Squared Error (MSE): 648581.7053669427
+Mean Squared Error (MSE): 645927.1032691925
 
-Mean Absolute Error (MAE): 511.28882520725983
+Mean Absolute Error (MAE): 509.1785189644252
 
-Root Mean Squared Error (RMSE): 805.3481889015103
+Root Mean Squared Error (RMSE): 803.695902234914
 
-R2 Score: 0.8541586266087651
+R2 Score: 0.8556033776780865
 
 Observacion:
 
@@ -99,12 +99,7 @@ El accuracy o exactitud del modelo fue de 0.71 , o un 71 % de predicciones corre
 
 Matriz de Confusión:
 
-[[7777 3264]
-
-[3222 7965]]
-
 ![Presentación](https://raw.githubusercontent.com/BrandonLCC/Informe_Tecnico_FMY0100/main/images/matriz.png)
-
 
 Sensitivity o la cantidad de casos positivos que el algorimo ha clasificado correctamente con un valor de: 0.7140
 
