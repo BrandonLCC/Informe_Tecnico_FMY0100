@@ -1,8 +1,9 @@
-# Caso - Counter Strike
+
+![Presentación](https://raw.githubusercontent.com/BrandonLCC/Informe_Tecnico_FMY0100/main/images/imagen-presentacion.webp)
+
+# Caso - Counter Strike: Global Offensive
 
 Empresa: Valve
-
-Versión del proyecto: Counter Strike Global Offensive
 
 Integrantes: Brandon Casas, Felipe Godoy, Leo
 
