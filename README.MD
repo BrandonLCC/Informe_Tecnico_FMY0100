@@ -11,6 +11,18 @@ Docente: Giocrisrai Godoy Bonillo
 
 ## Etapa 1  
 
+En esta primera etapa, nos centramos en las dos fases de inicales de la metodologia CRISP-DM: Business Understanding y la Fase 2: Data Understanding. La cuales son fundamentales para orientar nuestra investigación.
+
+En la fase Business Understanding, buscamos comprender el problema desde el punto de vista empresarial, definiendo claramente el objetivo del proyecto para luego realizar las tareas de analisis de datos.
+
+En la Fase de Data Understanding se realizan las primeras actividades realiadas con el conjunto de datos, lo que nos permite:
+
+- Identificar y familiarizarnos con las variables disponibles.
+- Determinar la naturaleza de los datos, distinguiendo entre variables numéricas y categóricas.
+- Detectar valores duplicados o datos nulos. 
+- Analizar el comportamiento de los datos mediante herramientas gráficas como diagramas de dispersión, gráficos de barras, histogramas, entre otros.
+- Evaluar la correlación entre variables para identificar posibles relaciones significativas.
+
 ## Etapa 2 - Modelos de regresión 
 
 ### Modelos 
@@ -82,29 +94,31 @@ con GridSearchCV para optimizar los hiperparámetros del modelo, los resultados 
 
 ### Mejor modelo de clasificación
 
-De todos los modelos realizados, el Random Forest Classifier obtuvo el mejor desempeño en la predicción de partidas ganadas y perdidas. Utilizando las características *TeamStartingEquipmentValue, MatchKills, MatchAssists y Map * como variables, se obtuvieron los siguientes resultados: para la clase 0 se alcanzó una precisión de 0.68, un recall de 0.63 y un f1-score de 0.66, lo que representa un rendimiento aceptable. Para la clase 1, se logró una precisión de 0.62, un recall de 0.67 y un f1-score de 0.64.
-El accuracy o exactitud del modelo fue de 0.65, o un 65% de predicciones correctas considerando todos los valores de la matriz de confusión, la cual fue la siguiente:
+De todos los modelos realizados, el Random Forest Classifier obtuvo el mejor desempeño en la predicción de partidas ganadas y perdidas. Utilizando las características *MatchKills, MatchAssists, MatchHeadshots, RoundStartingEquipmentValue, RNonLethalGrenadesThrown, Team y  Map* como variables, se obtuvieron los siguientes resultados: para la clase 0 se alcanzó una precisión de  0.71 , un recall de 0.70 y un f1-score de  0.71, lo que representa un rendimiento aceptable. Para la clase 1, se logró una precisión de   0.71, un recall de 0.71 y un f1-score de 0.71.
+El accuracy o exactitud del modelo fue de 0.71 , o un 71 % de predicciones correctas considerando todos los valores de la matriz de confusión, la cual fue la siguiente:
 
 Matriz de Confusión:
 
-[[5244 3067]
+[[7777 3264]
 
-[2449 4962]]
+[3222 7965]]
 
-Sensitivity o la cantidad de casos positivos que el algorimo ha clasificado correctamente con un valor de: 0.6695
+Sensitivity o la cantidad de casos positivos que el algorimo ha clasificado correctamente con un valor de: 0.7140
 
-Specificity o la cantidad de casos negativos que el algorimo ha clasificado correctamente con un valor de: 0.6310
+Specificity o la cantidad de casos negativos que el algorimo ha clasificado correctamente con un valor de:  0.7052
 
-Curva ROC: 0.71
+Curva ROC: 0.79
 
-Curva PR: 0.68
+Curva PR: 0.78
 
-En el uso del GridsearchCV para encontrar los mejores hiperparametros, Se obtuvo para la clase 0 una precision de 0.66, un recall de 0.67 y un f1-score de 0.66. Para la clase 1 una precision de 0.62 un recall de 0.61 y uun f1-score de 0.62. Siendo estos resultados un poco menor que el resultado del primer modelo.
+En el uso del GridsearchCV para encontrar los mejores hiperparametros, Se obtuvo para la clase 0 una precision de 0.70, un recall de 0.75 y un f1-score de 0.72. Para la clase 1 una precision de 0.73 un recall de  0.69 y uun f1-score de  0.71.
 
 
 # Entrega final
 
-
+- Mejora y optimización de los modelos de regresión y clasificación
+- Deployment del proyecto
+- Mejora en los notebooks
 
 # Como instalar el proyecto
 
