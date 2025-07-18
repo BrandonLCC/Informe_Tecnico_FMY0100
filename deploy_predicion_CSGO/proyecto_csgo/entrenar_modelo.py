@@ -62,7 +62,7 @@ modelo_clf = RandomForestClassifier(
     min_samples_split=2,
     min_samples_leaf=1,
     max_features='sqrt',
-    class_weight={0: 1, 1: 2.8},
+    class_weight={0: 1, 1: 2.9},
     random_state=42,
     n_jobs=-1
     )
