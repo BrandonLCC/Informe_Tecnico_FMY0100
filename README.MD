@@ -2,7 +2,7 @@
 
 Empresa: Valve
 
-Versión del proyecto: Counter Strike: GO
+Versión del proyecto: Counter Strike Global Offensive
 
 Integrantes: Brandon Casas, Felipe Godoy, Leo
 
