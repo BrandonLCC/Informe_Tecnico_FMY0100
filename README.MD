@@ -103,6 +103,9 @@ Matriz de Confusión:
 
 [3222 7965]]
 
+![Presentación](https://raw.githubusercontent.com/BrandonLCC/Informe_Tecnico_FMY0100/main/images/matriz.png)
+
+
 Sensitivity o la cantidad de casos positivos que el algorimo ha clasificado correctamente con un valor de: 0.7140
 
 Specificity o la cantidad de casos negativos que el algorimo ha clasificado correctamente con un valor de:  0.7052
